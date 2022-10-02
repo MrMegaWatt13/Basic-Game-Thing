@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>NaN</title>   
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=0"/>
+</head>
+<body>
+
+<h1>LVL: <span id="xplvl">0</span></h1><br>
+<p>[span id="xp"</span> / <span id="xpCost"></p>
+
+<p>Spawned: 'null'</p>
+
+<script type="text/javascript">
+
+var xp = 0;
+
+var xplvl = 0;
+
+function xptolvl(){
+   var xpCost= Math.floor(10 * Math.pow(1.1,xplvl));        
+    if(xp >= xpCost){                                                                  
+        xplvl = xplvl + 1;                                                                   
+        xp = xp - xpCost,                                                         
+        document.getElementById('xplvl').innerHTML = xplvl;    
+        document.getElementById('xp').innerHTML = xp;
+        lvlup();           
+    };
+    var nextCost = Math.floor(10 * Math.pow(1.1,xplvl));       
+    document.getElementById('xpCost').innerHTML = nextCost;
+};
+
+window.setInterval(function(){
+
+    xp = xp + 7853419467;
+    xptolvl();
+
+}, 10)
+
+function lvlup(){
+    var xp = 0;
+}
+
+var xp;
+lvlup();
+
+</script>
+
+</body>
+</html>
