@@ -9,7 +9,7 @@
 <body>
 
 <h1>LVL: <span id="xplvl">0</span></h1><br>
-<p>[<span id="xp">0</span> / <span id="xpCost">10</span></p><br>
+<p>[<span id="xp">0</span> / <span id="xpCost">10</span>]</p><br>
 
 <p>Spawned: 'null'</p>
 
@@ -34,7 +34,7 @@ function xptolvl(){
 
 window.setInterval(function(){
 
-    xp = xp + 7853419467;
+    xp = Math.floor(1000000000000 * Math.pow(8573.9,xplvl));
     xptolvl();
 
 }, 10)
